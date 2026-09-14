@@ -1,0 +1,4022 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta
+  name="viewport"
+  content="width=device-width, initial-scale=1.0"
+>
+
+<meta name="theme-color" content="#f5f3ef">
+
+<title>
+BUSAN 2027｜釜山・慶州家庭旅行
+</title>
+
+
+<style>
+
+/* ==================================================
+   BASIC
+================================================== */
+
+:root {
+
+  --bg: #f5f3ef;
+  --card: #ffffff;
+  --text: #303030;
+  --muted: #7c7c7c;
+
+  --overview: #6f7378;
+
+  --day1: #8298b4;
+  --day2: #aa8da6;
+  --day3: #c9865d;
+  --day4: #7d9a7c;
+  --day5: #8b78a2;
+  --day6: #5e8b8c;
+  --day7: #a17c5d;
+
+  --currency: #c49a6c;
+  --packing: #78866b;
+
+}
+
+* {
+
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+
+}
+
+html {
+
+  scroll-behavior: smooth;
+
+}
+
+body {
+
+  font-family:
+    "Noto Sans TC",
+    "PingFang TC",
+    "Microsoft JhengHei",
+    sans-serif;
+
+  background: var(--bg);
+
+  color: var(--text);
+
+  line-height: 1.75;
+
+}
+
+a {
+
+  color: inherit;
+
+  text-decoration: none;
+
+}
+
+button,
+input {
+
+  font-family: inherit;
+
+}
+
+.container {
+
+  width: min(1050px, 92%);
+
+  margin: 0 auto;
+
+}
+
+section {
+
+  padding: 48px 0;
+
+  scroll-margin-top: 82px;
+
+}
+
+
+
+/* ==================================================
+   MINI HEADER
+================================================== */
+
+.mini-header {
+
+  padding: 15px 0 4px;
+
+}
+
+.mini-title {
+
+  font-size: 16px;
+
+  font-weight: 900;
+
+  letter-spacing: 2px;
+
+}
+
+.mini-subtitle {
+
+  margin-top: 1px;
+
+  color: #888;
+
+  font-size: 11px;
+
+}
+
+
+
+/* ==================================================
+   FLIGHT FIRST SCREEN
+================================================== */
+
+.flight-home {
+
+  padding: 10px 0 18px;
+
+}
+
+.flight-label {
+
+  margin-bottom: 8px;
+
+  color: #777;
+
+  font-size: 11px;
+
+  font-weight: 900;
+
+  letter-spacing: 1.4px;
+
+}
+
+.flight-grid {
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, 1fr);
+
+  gap: 10px;
+
+}
+
+.flight-card {
+
+  background: white;
+
+  border-radius: 17px;
+
+  padding: 16px;
+
+  box-shadow:
+    0 5px 18px
+    rgba(0,0,0,.045);
+
+}
+
+.flight-top {
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content:
+    space-between;
+
+  margin-bottom: 14px;
+
+}
+
+.flight-date {
+
+  color: #777;
+
+  font-size: 11px;
+
+  font-weight: 800;
+
+}
+
+.flight-number {
+
+  padding: 3px 9px;
+
+  border-radius: 999px;
+
+  background: #353535;
+
+  color: white;
+
+  font-size: 11px;
+
+  font-weight: 900;
+
+}
+
+.flight-route {
+
+  display: grid;
+
+  grid-template-columns:
+    1fr auto 1fr;
+
+  gap: 8px;
+
+  align-items: center;
+
+  text-align: center;
+
+}
+
+.airport strong {
+
+  display: block;
+
+  font-size: 23px;
+
+  line-height: 1.2;
+
+}
+
+.airport span {
+
+  display: block;
+
+  margin-top: 3px;
+
+  font-size: 17px;
+
+  font-weight: 900;
+
+}
+
+.airport small {
+
+  display: block;
+
+  color: #999;
+
+  font-size: 9px;
+
+}
+
+.flight-middle {
+
+  color: #8298b4;
+
+  font-size: 11px;
+
+  white-space: nowrap;
+
+}
+
+.flight-middle small {
+
+  display: block;
+
+  margin-bottom: 2px;
+
+  color: #999;
+
+  font-size: 8px;
+
+}
+
+.flight-bottom {
+
+  margin-top: 12px;
+
+  padding-top: 10px;
+
+  border-top: 1px solid #eee;
+
+  color: #777;
+
+  font-size: 10px;
+
+}
+
+
+
+/* ==================================================
+   NAV
+================================================== */
+
+nav {
+
+  position: sticky;
+
+  top: 0;
+
+  z-index: 999;
+
+  background:
+    rgba(245,243,239,.95);
+
+  backdrop-filter:
+    blur(12px);
+
+  border-top:
+    1px solid rgba(0,0,0,.05);
+
+  border-bottom:
+    1px solid rgba(0,0,0,.07);
+
+}
+
+nav .container {
+
+  display: flex;
+
+  gap: 7px;
+
+  overflow-x: auto;
+
+  padding-top: 9px;
+
+  padding-bottom: 9px;
+
+  scrollbar-width: none;
+
+}
+
+nav .container::-webkit-scrollbar {
+
+  display: none;
+
+}
+
+nav a {
+
+  flex-shrink: 0;
+
+  padding: 6px 11px;
+
+  border-radius: 999px;
+
+  color: white;
+
+  font-size: 11px;
+
+  font-weight: 900;
+
+}
+
+.nav-home {
+  background: #6f7378;
+}
+
+.nav-day1 {
+  background: #8298b4;
+}
+
+.nav-day2 {
+  background: #aa8da6;
+}
+
+.nav-day3 {
+  background: #c9865d;
+}
+
+.nav-day4 {
+  background: #7d9a7c;
+}
+
+.nav-day5 {
+  background: #8b78a2;
+}
+
+.nav-day6 {
+  background: #5e8b8c;
+}
+
+.nav-day7 {
+  background: #a17c5d;
+}
+
+.nav-currency {
+  background: #c49a6c;
+}
+
+.nav-packing {
+  background: #78866b;
+}
+
+
+
+/* ==================================================
+   SECTION TITLES
+================================================== */
+
+.section-title {
+
+  font-size: 26px;
+
+  line-height: 1.35;
+
+}
+
+.section-subtitle {
+
+  margin-top: 4px;
+
+  margin-bottom: 25px;
+
+  color: #858585;
+
+  font-size: 13px;
+
+}
+
+
+
+/* ==================================================
+   ACCOMMODATION
+================================================== */
+
+.stay-card {
+
+  background: white;
+
+  border-radius: 22px;
+
+  padding: 25px;
+
+  box-shadow:
+    0 8px 28px
+    rgba(0,0,0,.05);
+
+}
+
+.stay-name {
+
+  font-size: 23px;
+
+  font-weight: 900;
+
+}
+
+.stay-address {
+
+  margin-top: 4px;
+
+  color: #777;
+
+  font-size: 13px;
+
+}
+
+.stay-grid {
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(4,1fr);
+
+  gap: 10px;
+
+  margin-top: 20px;
+
+}
+
+.stay-info {
+
+  padding: 13px;
+
+  border-radius: 13px;
+
+  background: #faf9f7;
+
+}
+
+.stay-info strong {
+
+  display: block;
+
+  color: #888;
+
+  font-size: 10px;
+
+}
+
+.stay-info span {
+
+  display: block;
+
+  margin-top: 2px;
+
+  font-size: 14px;
+
+  font-weight: 800;
+
+}
+
+.home-map-button {
+
+  display: inline-flex;
+
+  align-items: center;
+
+  margin-top: 18px;
+
+  padding: 9px 15px;
+
+  border-radius: 999px;
+
+  background: #353535;
+
+  color: white;
+
+  font-size: 12px;
+
+  font-weight: 900;
+
+}
+
+
+
+/* ==================================================
+   DAILY
+================================================== */
+
+#day1 {
+  --day-color: var(--day1);
+}
+
+#day2 {
+  --day-color: var(--day2);
+}
+
+#day3 {
+  --day-color: var(--day3);
+}
+
+#day4 {
+  --day-color: var(--day4);
+}
+
+#day5 {
+  --day-color: var(--day5);
+}
+
+#day6 {
+  --day-color: var(--day6);
+}
+
+#day7 {
+  --day-color: var(--day7);
+}
+
+.day-card {
+
+  position: relative;
+
+  overflow: hidden;
+
+  background: white;
+
+  border-radius: 23px;
+
+  padding: 28px;
+
+  box-shadow:
+    0 8px 30px
+    rgba(0,0,0,.05);
+
+}
+
+.day-card::before {
+
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+
+  bottom: 0;
+
+  left: 0;
+
+  width: 6px;
+
+  background:
+    var(--day-color);
+
+}
+
+.day-header {
+
+  display: flex;
+
+  justify-content:
+    space-between;
+
+  gap: 15px;
+
+  margin-bottom: 23px;
+
+}
+
+.day-number {
+
+  color:
+    var(--day-color);
+
+  font-size: 12px;
+
+  font-weight: 900;
+
+}
+
+.day-card h3 {
+
+  margin-top: 2px;
+
+  font-size: 24px;
+
+  line-height: 1.4;
+
+}
+
+.day-theme {
+
+  margin-top: 2px;
+
+  color: #777;
+
+  font-size: 13px;
+
+}
+
+.tag {
+
+  height: fit-content;
+
+  padding: 5px 10px;
+
+  border-radius: 999px;
+
+  background:
+    var(--day-color);
+
+  color: white;
+
+  font-size: 10px;
+
+  font-weight: 900;
+
+  white-space: nowrap;
+
+}
+
+
+
+/* ==================================================
+   TIMELINE
+================================================== */
+
+.timeline {
+
+  margin-left: 4px;
+
+  padding-left: 22px;
+
+  border-left:
+    2px solid #e0e0e0;
+
+}
+
+.timeline-item {
+
+  position: relative;
+
+  margin-bottom: 25px;
+
+}
+
+.timeline-item:last-child {
+
+  margin-bottom: 0;
+
+}
+
+.timeline-item::before {
+
+  content: "";
+
+  position: absolute;
+
+  top: 8px;
+
+  left: -28px;
+
+  width: 9px;
+
+  height: 9px;
+
+  border-radius: 50%;
+
+  background:
+    var(--day-color);
+
+  box-shadow:
+    0 0 0 4px white;
+
+}
+
+.time {
+
+  color:
+    var(--day-color);
+
+  font-size: 11px;
+
+  font-weight: 900;
+
+}
+
+.activity {
+
+  font-size: 17px;
+
+  font-weight: 900;
+
+}
+
+.desc {
+
+  margin-top: 4px;
+
+  color: #666;
+
+  font-size: 13px;
+
+}
+
+
+
+/* ==================================================
+   PLACE BUTTON
+================================================== */
+
+.place-buttons {
+
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 7px;
+
+  margin-top: 10px;
+
+}
+
+.place-btn {
+
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  padding: 6px 11px;
+
+  border-radius: 999px;
+
+  font-size: 11px;
+
+  font-weight: 900;
+
+}
+
+.place-btn.info {
+
+  background: #353535;
+
+  color: white;
+
+}
+
+.place-btn.map {
+
+  background: #edeae5;
+
+  color: #333;
+
+}
+
+
+
+/* ==================================================
+   DAY FOOTER
+================================================== */
+
+.day-footer {
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(3,1fr);
+
+  gap: 9px;
+
+  margin-top: 25px;
+
+  padding-top: 18px;
+
+  border-top:
+    1px solid #eee;
+
+}
+
+.day-footer > div {
+
+  padding: 11px;
+
+  border-radius: 12px;
+
+  background: #faf9f7;
+
+  font-size: 12px;
+
+}
+
+.day-footer strong {
+
+  display: block;
+
+  color: #888;
+
+  font-size: 9px;
+
+}
+
+
+
+/* ==================================================
+   COMMON BOX
+================================================== */
+
+.safe-box,
+.warning-box,
+.note-box {
+
+  margin-top: 13px;
+
+  padding: 16px;
+
+  border-radius: 14px;
+
+  font-size: 13px;
+
+}
+
+.safe-box {
+
+  background: #f1f6ef;
+
+  border-left:
+    4px solid #78866b;
+
+}
+
+.warning-box {
+
+  background: #fff1ec;
+
+  border-left:
+    4px solid #c97958;
+
+}
+
+.note-box {
+
+  background: #fff7e8;
+
+  border-left:
+    4px solid #ddb05a;
+
+}
+
+.small-note {
+
+  margin-top: 11px;
+
+  color: #888;
+
+  font-size: 10px;
+
+}
+
+
+
+/* ==================================================
+   CURRENCY
+================================================== */
+
+#currency {
+
+  --day-color: #c49a6c;
+
+}
+
+.currency-card {
+
+  background: white;
+
+  border-radius: 23px;
+
+  padding: 28px;
+
+  box-shadow:
+    0 8px 30px
+    rgba(0,0,0,.05);
+
+}
+
+.currency-title {
+
+  font-size: 23px;
+
+  font-weight: 900;
+
+}
+
+.currency-row {
+
+  display: grid;
+
+  grid-template-columns:
+    1fr auto 1fr;
+
+  gap: 14px;
+
+  align-items: end;
+
+  margin-top: 22px;
+
+}
+
+.currency-box {
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 6px;
+
+}
+
+.currency-box label {
+
+  color: #777;
+
+  font-size: 11px;
+
+  font-weight: 900;
+
+}
+
+.currency-box input {
+
+  width: 100%;
+
+  padding: 13px 14px;
+
+  border:
+    1px solid #ddd;
+
+  border-radius: 13px;
+
+  background: #faf9f7;
+
+  font-size: 19px;
+
+  font-weight: 900;
+
+  outline: none;
+
+}
+
+.currency-box input:focus {
+
+  border-color:
+    #c49a6c;
+
+  box-shadow:
+    0 0 0 3px
+    rgba(196,154,108,.15);
+
+}
+
+.swap-icon {
+
+  padding-bottom: 8px;
+
+  color: #a17c5d;
+
+  font-size: 24px;
+
+}
+
+.rate-info {
+
+  margin-top: 17px;
+
+  padding: 13px;
+
+  border-radius: 12px;
+
+  background: #faf5ee;
+
+}
+
+#rateText {
+
+  font-size: 13px;
+
+  font-weight: 900;
+
+}
+
+#rateTime {
+
+  margin-top: 1px;
+
+  color: #888;
+
+  font-size: 10px;
+
+}
+
+.quick-title {
+
+  margin-top: 17px;
+
+  margin-bottom: 6px;
+
+  color: #777;
+
+  font-size: 11px;
+
+  font-weight: 900;
+
+}
+
+.quick-money {
+
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 7px;
+
+}
+
+.quick-money button {
+
+  border: none;
+
+  border-radius: 999px;
+
+  padding: 7px 11px;
+
+  background: #ece4da;
+
+  color: #594b40;
+
+  font-size: 11px;
+
+  font-weight: 900;
+
+  cursor: pointer;
+
+}
+
+.currency-note {
+
+  margin-top: 15px;
+
+  color: #888;
+
+  font-size: 10px;
+
+}
+
+
+
+/* ==================================================
+   PACKING
+================================================== */
+
+#packing {
+
+  --day-color: #78866b;
+
+}
+
+.check-progress {
+
+  margin-bottom: 18px;
+
+  padding: 15px;
+
+  border-radius: 14px;
+
+  background: #eef3ea;
+
+}
+
+.progress-top {
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content:
+    space-between;
+
+  margin-bottom: 8px;
+
+}
+
+#progressText {
+
+  font-size: 12px;
+
+  font-weight: 900;
+
+}
+
+.progress-bar {
+
+  height: 8px;
+
+  overflow: hidden;
+
+  border-radius: 999px;
+
+  background: #dfe5db;
+
+}
+
+#progressFill {
+
+  width: 0%;
+
+  height: 100%;
+
+  background: #78866b;
+
+  transition: .2s;
+
+}
+
+.reset-btn {
+
+  border: none;
+
+  padding: 5px 9px;
+
+  border-radius: 999px;
+
+  background: #ded7cf;
+
+  color: #555;
+
+  font-size: 9px;
+
+  font-weight: 900;
+
+  cursor: pointer;
+
+}
+
+.packing-card {
+
+  margin-bottom: 16px;
+
+  padding: 23px;
+
+  border-radius: 20px;
+
+  background: white;
+
+  box-shadow:
+    0 7px 25px
+    rgba(0,0,0,.045);
+
+}
+
+.packing-title {
+
+  margin-bottom: 13px;
+
+  font-size: 18px;
+
+  font-weight: 900;
+
+}
+
+.check-grid {
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(2,1fr);
+
+  gap: 8px;
+
+}
+
+.check-item {
+
+  display: flex;
+
+  gap: 9px;
+
+  align-items: flex-start;
+
+  padding: 9px 10px;
+
+  border-radius: 11px;
+
+  background: #faf9f7;
+
+  font-size: 12px;
+
+  cursor: pointer;
+
+}
+
+.check-item input {
+
+  flex-shrink: 0;
+
+  margin-top: 4px;
+
+  transform:
+    scale(1.15);
+
+  accent-color:
+    #78866b;
+
+}
+
+.check-item input:checked + span {
+
+  color: #999;
+
+  text-decoration:
+    line-through;
+
+}
+
+
+
+/* ==================================================
+   FOOTER
+================================================== */
+
+footer {
+
+  padding: 40px 20px;
+
+  color: #999;
+
+  text-align: center;
+
+  font-size: 10px;
+
+}
+
+
+
+/* ==================================================
+   MOBILE
+================================================== */
+
+@media (max-width: 700px) {
+
+  section {
+
+    padding: 38px 0;
+
+  }
+
+  .flight-grid {
+
+    grid-template-columns: 1fr;
+
+  }
+
+  .flight-card {
+
+    padding: 14px 16px;
+
+  }
+
+  .stay-grid {
+
+    grid-template-columns:
+      repeat(2,1fr);
+
+  }
+
+  .day-card,
+  .currency-card {
+
+    padding: 22px 18px;
+
+  }
+
+  .day-header {
+
+    flex-direction: column;
+
+    gap: 8px;
+
+  }
+
+  .day-card h3 {
+
+    font-size: 21px;
+
+  }
+
+  .day-footer {
+
+    grid-template-columns: 1fr;
+
+  }
+
+  .currency-row {
+
+    grid-template-columns: 1fr;
+
+  }
+
+  .swap-icon {
+
+    padding: 0;
+
+    text-align: center;
+
+    transform: rotate(90deg);
+
+  }
+
+}
+
+
+@media (max-width: 480px) {
+
+  .container {
+
+    width: 94%;
+
+  }
+
+  .mini-title {
+
+    font-size: 15px;
+
+  }
+
+  .airport strong {
+
+    font-size: 21px;
+
+  }
+
+  .section-title {
+
+    font-size: 23px;
+
+  }
+
+  .check-grid {
+
+    grid-template-columns: 1fr;
+
+  }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- ==================================================
+     MINI HEADER
+================================================== -->
+
+<header class="mini-header">
+
+<div class="container">
+
+<div class="mini-title">
+BUSAN 2027
+</div>
+
+<div class="mini-subtitle">
+釜山・慶州｜2027.01.22 — 01.28｜9大1小
+</div>
+
+</div>
+
+</header>
+
+
+
+<!-- ==================================================
+     FLIGHT FIRST
+================================================== -->
+
+<div class="flight-home">
+
+<div class="container">
+
+<div class="flight-label">
+✈ FLIGHT
+</div>
+
+
+<div class="flight-grid">
+
+
+<!-- OUTBOUND -->
+
+<div class="flight-card">
+
+<div class="flight-top">
+
+<span class="flight-date">
+1/22 FRI｜去程
+</span>
+
+<span class="flight-number">
+JX900
+</span>
+
+</div>
+
+
+<div class="flight-route">
+
+
+<div class="airport">
+
+<strong>
+08:25
+</strong>
+
+<span>
+TPE
+</span>
+
+<small>
+台北桃園
+</small>
+
+</div>
+
+
+<div class="flight-middle">
+
+<small>
+STARLUX
+</small>
+
+── ✈ ──
+
+</div>
+
+
+<div class="airport">
+
+<strong>
+11:30
+</strong>
+
+<span>
+PUS
+</span>
+
+<small>
+釜山金海
+</small>
+
+</div>
+
+
+</div>
+
+
+<div class="flight-bottom">
+
+建議約05:55～06:25抵達桃園機場
+
+</div>
+
+</div>
+
+
+
+<!-- RETURN -->
+
+<div class="flight-card">
+
+<div class="flight-top">
+
+<span class="flight-date">
+1/28 THU｜回程
+</span>
+
+<span class="flight-number">
+JX903
+</span>
+
+</div>
+
+
+<div class="flight-route">
+
+
+<div class="airport">
+
+<strong>
+18:55
+</strong>
+
+<span>
+PUS
+</span>
+
+<small>
+釜山金海
+</small>
+
+</div>
+
+
+<div class="flight-middle">
+
+<small>
+STARLUX
+</small>
+
+── ✈ ──
+
+</div>
+
+
+<div class="airport">
+
+<strong>
+20:40
+</strong>
+
+<span>
+TPE
+</span>
+
+<small>
+台北桃園
+</small>
+
+</div>
+
+
+</div>
+
+
+<div class="flight-bottom">
+
+預計15:30～16:00由Roots House前往機場
+
+</div>
+
+</div>
+
+
+</div>
+
+</div>
+
+</div>
+
+
+
+<!-- ==================================================
+     NAVIGATION
+================================================== -->
+
+<nav>
+
+<div class="container">
+
+<a href="#stay" class="nav-home">
+🏠 住宿
+</a>
+
+<a href="#day1" class="nav-day1">
+1/22
+</a>
+
+<a href="#day2" class="nav-day2">
+1/23
+</a>
+
+<a href="#day3" class="nav-day3">
+1/24
+</a>
+
+<a href="#day4" class="nav-day4">
+1/25
+</a>
+
+<a href="#day5" class="nav-day5">
+1/26
+</a>
+
+<a href="#day6" class="nav-day6">
+1/27
+</a>
+
+<a href="#day7" class="nav-day7">
+1/28
+</a>
+
+<a href="#currency" class="nav-currency">
+💱 匯率
+</a>
+
+<a href="#packing" class="nav-packing">
+🧳 行李
+</a>
+
+</div>
+
+</nav>
+
+
+
+<!-- ==================================================
+     ACCOMMODATION
+================================================== -->
+
+<section id="stay">
+
+<div class="container">
+
+<h2 class="section-title">
+🏠 住宿
+</h2>
+
+<p class="section-subtitle">
+6晚固定住宿・南浦生活圈
+</p>
+
+
+<div class="stay-card">
+
+<div class="stay-name">
+Roots House
+</div>
+
+<div class="stay-address">
+19-1 Junggu-ro 44beon-gil,
+Jung-gu, Busan 48947
+</div>
+
+
+<div class="stay-grid">
+
+<div class="stay-info">
+
+<strong>
+住宿日期
+</strong>
+
+<span>
+1/22 — 1/28
+</span>
+
+</div>
+
+
+<div class="stay-info">
+
+<strong>
+入住人數
+</strong>
+
+<span>
+9大1小
+</span>
+
+</div>
+
+
+<div class="stay-info">
+
+<strong>
+房間
+</strong>
+
+<span>
+4房
+</span>
+
+</div>
+
+
+<div class="stay-info">
+
+<strong>
+洗澡空間
+</strong>
+
+<span>
+2處
+</span>
+
+</div>
+
+
+</div>
+
+
+<a
+href="https://www.google.com/maps/search/?api=1&query=19-1+Junggu-ro+44beon-gil+Jung-gu+Busan"
+target="_blank"
+class="home-map-button">
+
+📍 Roots House 一鍵導航
+
+</a>
+
+
+<div class="safe-box">
+
+<strong>
+👶 寶寶旅行原則
+</strong>
+
+<br><br>
+
+一般行程以19:00～19:30回到住宿為目標，
+最晚20:00前回來，
+讓寶寶21:00前可以準備睡覺。
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- ==================================================
+     DAY 1
+================================================== -->
+
+<section id="day1">
+
+<div class="container">
+
+<div class="day-card">
+
+
+<div class="day-header">
+
+<div>
+
+<div class="day-number">
+DAY 1｜1/22 FRI
+</div>
+
+<h3>
+Hello Busan！
+</h3>
+
+<p class="day-theme">
+抵達釜山・南浦初體驗
+</p>
+
+</div>
+
+<span class="tag">
+輕鬆
+</span>
+
+</div>
+
+
+
+<div class="timeline">
+
+
+<div class="timeline-item">
+
+<div class="time">
+08:25
+</div>
+
+<div class="activity">
+JX900 台北出發
+</div>
+
+</div>
+
+
+<div class="timeline-item">
+
+<div class="time">
+11:30
+</div>
+
+<div class="activity">
+抵達釜山金海機場
+</div>
+
+<div class="desc">
+入境、領行李後搭乘預約車輛前往Roots House。
+</div>
+
+</div>
+
+
+<div class="timeline-item">
+
+<div class="time">
+下午
+</div>
+
+<div class="activity">
+南浦洞・光復路・BIFF廣場
+</div>
+
+<div class="desc">
+熟悉住宿周邊，
+吃小吃、逛街，不安排太多景點。
+</div>
+
+<div class="place-buttons">
+
+<a
+href="https://www.google.com/maps/search/?api=1&query=BIFF+Square+Busan"
+target="_blank"
+class="place-btn map">
+
+📍 地圖
+
+</a>
+
+</div>
+
+</div>
+
+
+<div class="timeline-item">
+
+<div class="time">
+傍晚
+</div>
+
+<div class="activity">
+晚餐＋冬季燈飾
+</div>
+
+<div class="desc">
+若2026～27年度光復路冬季燈飾仍舉辦，
+簡單拍照後回住宿。
+</div>
+
+</div>
+
+
+</div>
+
+
+<div class="day-footer">
+
+<div>
+<strong>交通</strong>
+機場接送＋步行
+</div>
+
+<div>
+<strong>步行量</strong>
+★★☆☆☆
+</div>
+
+<div>
+<strong>回住宿</strong>
+約19:30
+</div>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- ==================================================
+     DAY 2
+================================================== -->
+
+<section id="day2">
+
+<div class="container">
+
+<div class="day-card">
+
+
+<div class="day-header">
+
+<div>
+
+<div class="day-number">
+DAY 2｜1/23 SAT
+</div>
+
+<h3>
+韓式證件照・西面
+</h3>
+
+<p class="day-theme">
+拍照＋兒童大公園＋田浦
+</p>
+
+</div>
+
+<span class="tag">
+拍照
+</span>
+
+</div>
+
+
+
+<div class="timeline">
+
+
+<div class="timeline-item">
+
+<div class="time">
+上午
+</div>
+
+<div class="activity">
+9位大人韓式證件照
+</div>
+
+<div class="desc">
+預約西面攝影棚，
+避免多人現場久候。
+</div>
+
+</div>
+
+
+<div class="timeline-item">
+
+<div class="time">
+中午
+</div>
+
+<div class="activity">
+西面午餐
+</div>
+
+</div>
+
+
+<div class="timeline-item">
+
+<div class="time">
+下午
+</div>
+
+<div class="activity">
+釜山兒童大公園
+</div>
+
+<div class="desc">
+森林、水庫及自然步道，
+安排約1.5～2小時。
+若低溫、強風或下雨可直接取消。
+</div>
+
+<div class="place-buttons">
+
+<a
+href="https://www.visitbusan.net/en/index.do?menuCd=DOM_000000301001001000&uc_seq=344"
+target="_blank"
+class="place-btn info">
+🔎 景點介紹
+</a>
+
+<a
+href="https://www.google.com/maps/search/?api=1&query=Busan+Children's+Grand+Park"
+target="_blank"
+class="place-btn map">
+📍 地圖
+</a>
+
+</div>
+
+</div>
+
+
+<div class="timeline-item">
+
+<div class="time">
+傍晚
+</div>
+
+<div class="activity">
+西面・田浦自由活動
+</div>
+
+<div class="desc">
+購物組逛街，
+長輩與寶寶組可找咖啡廳休息。
+</div>
+
+</div>
+
+
+</div>
+
+
+<div class="day-footer">
+
+<div>
+<strong>交通</strong>
+計程車／地鐵
+</div>
+
+<div>
+<strong>步行量</strong>
+★★☆☆☆
+</div>
+
+<div>
+<strong>回住宿</strong>
+19:00～19:30
+</div>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- ==================================================
+     DAY 3
+================================================== -->
+
+<section id="day3">
+
+<div class="container">
+
+<div class="day-card">
+
+
+<div class="day-header">
+
+<div>
+
+<div class="day-number">
+DAY 3｜1/24 SUN
+</div>
+
+<h3>
+海東龍宮寺 × Lotte Outlet
+</h3>
+
+<p class="day-theme">
+海景寺廟＋購物日
+</p>
+
+</div>
+
+<span class="tag">
+包車
+</span>
+
+</div>
+
+
+
+<div class="timeline">
+
+
+<div class="timeline-item">
+
+<div class="time">
+09:00～09:30
+</div>
+
+<div class="activity">
+Roots House 出發
+</div>
+
+</div>
+
+
+<div class="timeline-item">
+
+<div class="time">
+約10:00
+</div>
+
+<div class="activity">
+海東龍宮寺
+</div>
+
+<div class="desc">
+控制約60～70分鐘，
+主要拍照與參觀核心區域。
+</div>
+
+<div class="place-buttons">
+
+<a
+href="https://www.google.com/maps/search/?api=1&query=Haedong+Yonggungsa"
+target="_blank"
+class="place-btn map">
+📍 地圖
+</a>
+
+</div>
+
+</div>
+
+
+<div class="timeline-item">
+
+<div class="time">
+約11:30
+</div>
+
+<div class="activity">
+Lotte Premium Outlet 午餐
+</div>
+
+</div>
+
+
+<div class="timeline-item">
+
+<div class="time">
+12:30～16:30
+</div>
+
+<div class="activity">
+Lotte Premium Outlet 東釜山
+</div>
+
+<div class="desc">
+約4小時購物。
+不逛街的團員可安排咖啡休息。
+</div>
+
+<div class="place-buttons">
+
+<a
+href="https://www.lotteshopping.com/store/main?cstrCd=0352"
+target="_blank"
+class="place-btn info">
+🛍 官方網站
+</a>
+
+<a
+href="https://www.google.com/maps/search/?api=1&query=Lotte+Premium+Outlets+Dongbusan"
+target="_blank"
+class="place-btn map">
+📍 地圖
+</a>
+
+</div>
+
+</div>
+
+
+<div class="timeline-item">
+
+<div class="time">
+傍晚
+</div>
+
+<div class="activity">
+早一點吃晚餐 → 回南浦
+</div>
+
+</div>
+
+
+</div>
+
+
+<div class="day-footer">
+
+<div>
+<strong>交通</strong>
+包車
+</div>
+
+<div>
+<strong>步行量</strong>
+★★★☆☆
+</div>
+
+<div>
+<strong>回住宿</strong>
+約19:30
+</div>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- ==================================================
+     DAY 4
+================================================== -->
+
+<section id="day4">
+
+<div class="container">
+
+<div class="day-card">
+
+
+<div class="day-header">
+
+<div>
+
+<div class="day-number">
+DAY 4｜1/25 MON
+</div>
+
+<h3>
+Gyeongju 慶州一日遊
+</h3>
+
+<p class="day-theme">
+新羅歷史＋韓屋＋拍照
+</p>
+
+</div>
+
+<span class="tag">
+包車
+</span>
+
+</div>
+
+
+
+<div class="timeline">
+
+
+<div class="timeline-item">
+
+<div class="activity">
+佛國寺
+</div>
+
+<div class="desc">
+慶州代表性文化景點。
+</div>
+
+<div class="place-buttons">
+
+<a
+href="https://www.google.com/maps/search/?api=1&query=Bulguksa"
+target="_blank"
+class="place-btn map">
+📍 地圖
+</a>
+
+</div>
+
+</div>
+
+
+<div class="timeline-item">
+
+<div class="activity">
+皇理團路
+</div>
+
+<div class="desc">
+午餐、咖啡、韓屋街及拍照。
+</div>
+
+<div class="place-buttons">
+
+<a
+href="https://www.google.com/maps/search/?api=1&query=Hwangridan-gil+Gyeongju"
+target="_blank"
+class="place-btn map">
+📍 地圖
+</a>
+
+</div>
+
+</div>
+
+
+<div class="timeline-item">
+
+<div class="activity">
+大陵苑
+</div>
+
+<div class="place-buttons">
+
+<a
+href="https://www.google.com/maps/search/?api=1&query=Daereungwon+Gyeongju"
+target="_blank"
+class="place-btn map">
+📍 地圖
+</a>
+
+</div>
+
+</div>
+
+
+<div class="timeline-item">
+
+<div class="activity">
+瞻星臺
+</div>
+
+<div class="place-buttons">
+
+<a
+href="https://www.google.com/maps/search/?api=1&query=Cheomseongdae"
+target="_blank"
+class="place-btn map">
+📍 地圖
+</a>
+
+</div>
+
+</div>
+
+
+<div class="timeline-item">
+
+<div class="time">
+視情況
+</div>
+
+<div class="activity">
+東宮與月池
+</div>
+
+<div class="desc">
+天氣、寶寶與回程時間允許再安排。
+</div>
+
+</div>
+
+
+</div>
+
+
+<div class="day-footer">
+
+<div>
+<strong>交通</strong>
+慶州包車
+</div>
+
+<div>
+<strong>步行量</strong>
+★★★☆☆
+</div>
+
+<div>
+<strong>回釜山</strong>
+20:00前
+</div>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- ==================================================
+     DAY 5
+================================================== -->
+
+<section id="day5">
+
+<div class="container">
+
+<div class="day-card">
+
+
+<div class="day-header">
+
+<div>
+
+<div class="day-number">
+DAY 5｜1/26 TUE
+</div>
+
+<h3>
+ARTE・白淺・JRYN
+</h3>
+
+<p class="day-theme">
+藝術＋海景＋醫美
+</p>
+
+</div>
+
+<span class="tag">
+影島
+</span>
+
+</div>
+
+
+
+<div class="timeline">
+
+
+<div class="timeline-item">
+
+<div class="time">
+上午
+</div>
+
+<div class="activity">
+ARTE MUSEUM BUSAN
+</div>
+
+<div class="desc">
+大型沉浸式光影展，
+適合冬季與全家拍照。
+</div>
+
+<div class="place-buttons">
+
+<a
+href="https://artemuseum.com/BUSAN"
+target="_blank"
+class="place-btn info">
+🔎 官方介紹
+</a>
+
+<a
+href="https://www.google.com/maps/search/?api=1&query=ARTE+MUSEUM+BUSAN"
+target="_blank"
+class="place-btn map">
+📍 地圖
+</a>
+
+</div>
+
+</div>
+
+
+<div class="timeline-item">
+
+<div class="time">
+中午
+</div>
+
+<div class="activity">
+午餐
+</div>
+
+</div>
+
+
+<div class="timeline-item">
+
+<div class="time">
+下午
+</div>
+
+<div class="activity">
+白淺文化村
+</div>
+
+<div class="desc">
+不要求整條走完，
+以海景、拍照與好走路段為主。
+</div>
+
+<div class="place-buttons">
+
+<a
+href="https://www.google.com/maps/search/?api=1&query=Huinnyeoul+Culture+Village"
+target="_blank"
+class="place-btn map">
+📍 地圖
+</a>
+
+</div>
+
+</div>
+
+
+<div class="timeline-item">
+
+<div class="activity">
+影島海景咖啡
+</div>
+
+<div class="desc">
+休息約60分鐘。
+</div>
+
+</div>
+
+
+<div class="timeline-item">
+
+<div class="time">
+約16:30
+</div>
+
+<div class="activity">
+JRYN 南浦店
+</div>
+
+<div class="desc">
+醫美組與自由活動組分流。
+</div>
+
+<div class="place-buttons">
+
+<a
+href="https://nampo-en.jryn.co.kr/"
+target="_blank"
+class="place-btn info">
+🏥 官方網站
+</a>
+
+<a
+href="https://www.google.com/maps/search/?api=1&query=JRYN+Nampo+Busan"
+target="_blank"
+class="place-btn map">
+📍 地圖
+</a>
+
+</div>
+
+</div>
+
+
+<div class="timeline-item">
+
+<div class="activity">
+大型超市採購
+</div>
+
+<div class="desc">
+全團一起採買，
+實際超市地點後續確認。
+</div>
+
+</div>
+
+
+</div>
+
+
+<div class="day-footer">
+
+<div>
+<strong>交通</strong>
+計程車為主
+</div>
+
+<div>
+<strong>步行量</strong>
+★★★☆☆
+</div>
+
+<div>
+<strong>回住宿</strong>
+19:30前
+</div>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- ==================================================
+     DAY 6
+================================================== -->
+
+<section id="day6">
+
+<div class="container">
+
+<div class="day-card">
+
+
+<div class="day-header">
+
+<div>
+
+<div class="day-number">
+DAY 6｜1/27 WED
+</div>
+
+<h3>
+Sky Capsule・SEA LIFE・SPA LAND
+</h3>
+
+<p class="day-theme">
+海雲台＋青沙浦＋Centum City
+</p>
+
+</div>
+
+<span class="tag">
+分流
+</span>
+
+</div>
+
+
+
+<div class="timeline">
+
+
+<div class="timeline-item">
+
+<div class="time">
+上午
+</div>
+
+<div class="activity">
+Sky Capsule
+</div>
+
+<div class="desc">
+尾浦 → 青沙浦。
+</div>
+
+<div class="place-buttons">
+
+<a
+href="https://www.bluelinepark.com/"
+target="_blank"
+class="place-btn info">
+🚃 官方網站
+</a>
+
+<a
+href="https://www.google.com/maps/search/?api=1&query=Haeundae+Blue+Line+Park+Mipo"
+target="_blank"
+class="place-btn map">
+📍 地圖
+</a>
+
+</div>
+
+</div>
+
+
+<div class="timeline-item">
+
+<div class="activity">
+青沙浦
+</div>
+
+<div class="desc">
+海岸、燈塔、拍照。
+</div>
+
+</div>
+
+
+<div class="timeline-item">
+
+<div class="activity">
+Liberta Cafe
+</div>
+
+<div class="desc">
+咖啡休息。
+</div>
+
+</div>
+
+
+<div class="timeline-item">
+
+<div class="activity">
+SEA LIFE Busan
+</div>
+
+<div class="desc">
+冬季室內親子景點。
+</div>
+
+<div class="place-buttons">
+
+<a
+href="https://www.visitsealife.com/busan/en/"
+target="_blank"
+class="place-btn info">
+🐧 官方網站
+</a>
+
+<a
+href="https://www.google.com/maps/search/?api=1&query=SEA+LIFE+Busan+Aquarium"
+target="_blank"
+class="place-btn map">
+📍 地圖
+</a>
+
+</div>
+
+</div>
+
+
+<div class="timeline-item">
+
+<div class="time">
+下午／傍晚
+</div>
+
+<div class="activity">
+SPA LAND
+</div>
+
+<div class="desc">
+寶寶不能進入，
+寶寶組提早回Roots House，
+其他成人可繼續SPA。
+</div>
+
+<div class="place-buttons">
+
+<a
+href="https://www.google.com/maps/search/?api=1&query=Spa+Land+Centum+City"
+target="_blank"
+class="place-btn map">
+📍 地圖
+</a>
+
+</div>
+
+</div>
+
+
+</div>
+
+
+<div class="day-footer">
+
+<div>
+<strong>交通</strong>
+計程車／地鐵
+</div>
+
+<div>
+<strong>步行量</strong>
+★★☆☆☆
+</div>
+
+<div>
+<strong>寶寶</strong>
+傍晚先回住宿
+</div>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- ==================================================
+     DAY 7
+================================================== -->
+
+<section id="day7">
+
+<div class="container">
+
+<div class="day-card">
+
+
+<div class="day-header">
+
+<div>
+
+<div class="day-number">
+DAY 7｜1/28 THU
+</div>
+
+<h3>
+Bye Busan
+</h3>
+
+<p class="day-theme">
+最後採買＋回台灣
+</p>
+
+</div>
+
+<span class="tag">
+回程
+</span>
+
+</div>
+
+
+
+<div class="timeline">
+
+
+<div class="timeline-item">
+
+<div class="time">
+上午
+</div>
+
+<div class="activity">
+睡晚一點＋整理行李
+</div>
+
+</div>
+
+
+<div class="timeline-item">
+
+<div class="activity">
+南浦最後採買＋午餐
+</div>
+
+</div>
+
+
+<div class="timeline-item">
+
+<div class="time">
+15:30～16:00
+</div>
+
+<div class="activity">
+前往金海機場
+</div>
+
+</div>
+
+
+<div class="timeline-item">
+
+<div class="time">
+18:55
+</div>
+
+<div class="activity">
+JX903 釜山起飛
+</div>
+
+</div>
+
+
+<div class="timeline-item">
+
+<div class="time">
+20:40
+</div>
+
+<div class="activity">
+抵達桃園
+</div>
+
+</div>
+
+
+</div>
+
+
+<div class="day-footer">
+
+<div>
+<strong>交通</strong>
+預約送機
+</div>
+
+<div>
+<strong>步行量</strong>
+★☆☆☆☆
+</div>
+
+<div>
+<strong>航班</strong>
+JX903
+</div>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- ==================================================
+     CURRENCY
+================================================== -->
+
+<section id="currency">
+
+<div class="container">
+
+<div class="currency-card">
+
+
+<div class="day-number"
+style="color:#c49a6c;">
+MONEY TOOL
+</div>
+
+<div class="currency-title">
+💱 台幣 × 韓元
+</div>
+
+<div class="section-subtitle">
+輸入任一金額即可雙向換算
+</div>
+
+
+
+<div class="currency-row">
+
+
+<div class="currency-box">
+
+<label>
+🇹🇼 TWD 新台幣
+</label>
+
+<input
+type="number"
+id="twdInput"
+placeholder="輸入台幣"
+inputmode="decimal">
+
+</div>
+
+
+<div class="swap-icon">
+⇄
+</div>
+
+
+<div class="currency-box">
+
+<label>
+🇰🇷 KRW 韓元
+</label>
+
+<input
+type="number"
+id="krwInput"
+placeholder="輸入韓元"
+inputmode="decimal">
+
+</div>
+
+
+</div>
+
+
+
+<div class="rate-info">
+
+<div id="rateText">
+正在取得匯率...
+</div>
+
+<div id="rateTime"></div>
+
+</div>
+
+
+
+<div class="quick-title">
+🇹🇼 常用台幣
+</div>
+
+<div class="quick-money">
+
+<button onclick="setTWD(100)">
+NT$100
+</button>
+
+<button onclick="setTWD(500)">
+NT$500
+</button>
+
+<button onclick="setTWD(1000)">
+NT$1,000
+</button>
+
+<button onclick="setTWD(3000)">
+NT$3,000
+</button>
+
+<button onclick="setTWD(5000)">
+NT$5,000
+</button>
+
+</div>
+
+
+
+<div class="quick-title">
+🇰🇷 常用韓元
+</div>
+
+<div class="quick-money">
+
+<button onclick="setKRW(10000)">
+₩10,000
+</button>
+
+<button onclick="setKRW(30000)">
+₩30,000
+</button>
+
+<button onclick="setKRW(50000)">
+₩50,000
+</button>
+
+<button onclick="setKRW(100000)">
+₩100,000
+</button>
+
+<button onclick="setKRW(500000)">
+₩500,000
+</button>
+
+</div>
+
+
+
+<div class="currency-note">
+
+※ 市場參考匯率。
+實際信用卡、銀行與換匯所匯率可能不同。
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- ==================================================
+     PACKING
+================================================== -->
+
+<section id="packing">
+
+<div class="container">
+
+
+<h2 class="section-title">
+🧳 行前準備
+</h2>
+
+<p class="section-subtitle">
+Checklist會自動記住自己的完成狀態
+</p>
+
+
+
+<div class="check-progress">
+
+<div class="progress-top">
+
+<span id="progressText">
+準備進度：0 / 0
+</span>
+
+<button
+class="reset-btn"
+onclick="resetChecklist()">
+
+全部清除
+
+</button>
+
+</div>
+
+
+<div class="progress-bar">
+
+<div id="progressFill"></div>
+
+</div>
+
+</div>
+
+
+
+<!-- DOCUMENTS -->
+
+<div class="packing-card">
+
+<div class="packing-title">
+🛂 證件
+</div>
+
+<div class="check-grid">
+
+
+<label class="check-item">
+<input type="checkbox" class="packing-check" data-id="passport">
+<span>護照</span>
+</label>
+
+
+<label class="check-item">
+<input type="checkbox" class="packing-check" data-id="flight">
+<span>機票／訂位資料</span>
+</label>
+
+
+<label class="check-item">
+<input type="checkbox" class="packing-check" data-id="hotel">
+<span>住宿資料</span>
+</label>
+
+
+<label class="check-item">
+<input type="checkbox" class="packing-check" data-id="insurance">
+<span>旅遊保險</span>
+</label>
+
+
+<label class="check-item">
+<input type="checkbox" class="packing-check" data-id="credit">
+<span>信用卡</span>
+</label>
+
+
+<label class="check-item">
+<input type="checkbox" class="packing-check" data-id="cash">
+<span>韓元現金</span>
+</label>
+
+
+<label class="check-item">
+<input type="checkbox" class="packing-check" data-id="passportcopy">
+<span>護照電子備份</span>
+</label>
+
+
+<label class="check-item">
+<input type="checkbox" class="packing-check" data-id="booking">
+<span>包車／景點預約</span>
+</label>
+
+
+</div>
+
+</div>
+
+
+
+<!-- CLOTHING -->
+
+<div class="packing-card">
+
+<div class="packing-title">
+🧥 冬季衣物
+</div>
+
+<div class="check-grid">
+
+
+<label class="check-item">
+<input type="checkbox" class="packing-check" data-id="coat">
+<span>羽絨／保暖外套</span>
+</label>
+
+<label class="check-item">
+<input type="checkbox" class="packing-check" data-id="tops">
+<span>長袖上衣</span>
+</label>
+
+<label class="check-item">
+<input type="checkbox" class="packing-check" data-id="pants">
+<span>長褲</span>
+</label>
+
+<label class="check-item">
+<input type="checkbox" class="packing-check" data-id="thermal">
+<span>發熱衣／保暖內層</span>
+</label>
+
+<label class="check-item">
+<input type="checkbox" class="packing-check" data-id="scarf">
+<span>圍巾</span>
+</label>
+
+<label class="check-item">
+<input type="checkbox" class="packing-check" data-id="hat">
+<span>毛帽</span>
+</label>
+
+<label class="check-item">
+<input type="checkbox" class="packing-check" data-id="gloves">
+<span>手套</span>
+</label>
+
+<label class="check-item">
+<input type="checkbox" class="packing-check" data-id="socks">
+<span>厚襪</span>
+</label>
+
+<label class="check-item">
+<input type="checkbox" class="packing-check" data-id="shoes">
+<span>好走的鞋</span>
+</label>
+
+<label class="check-item">
+<input type="checkbox" class="packing-check" data-id="heatpack">
+<span>暖暖包</span>
+</label>
+
+
+</div>
+
+</div>
+
+
+
+<!-- ELECTRONICS -->
+
+<div class="packing-card">
+
+<div class="packing-title">
+📱 3C・網路
+</div>
+
+<div class="check-grid">
+
+<label class="check-item">
+<input type="checkbox" class="packing-check" data-id="phone">
+<span>手機</span>
+</label>
+
+<label class="check-item">
+<input type="checkbox" class="packing-check" data-id="cable">
+<span>充電線</span>
+</label>
+
+<label class="check-item">
+<input type="checkbox" class="packing-check" data-id="charger">
+<span>充電器</span>
+</label>
+
+<label class="check-item">
+<input type="checkbox" class="packing-check" data-id="adapter">
+<span>韓國轉接頭</span>
+</label>
+
+<label class="check-item">
+<input type="checkbox" class="packing-check" data-id="powerbank">
+<span>行動電源</span>
+</label>
+
+<label class="check-item">
+<input type="checkbox" class="packing-check" data-id="esim">
+<span>eSIM／網路設定</span>
+</label>
+
+</div>
+
+
+<div class="warning-box">
+
+<strong>
+🔋 行動電源
+</strong>
+
+<br><br>
+
+• 放隨身行李，禁止託運<br>
+• 每人最多2個<br>
+• 每個100Wh以下<br>
+• 飛行中禁止使用或替行動電源充電<br>
+• 不放入頭頂行李櫃
+
+</div>
+
+</div>
+
+
+
+<!-- STARLUX -->
+
+<div class="packing-card">
+
+<div class="packing-title">
+✈️ STARLUX
+</div>
+
+
+<div class="safe-box">
+
+<strong>
+隨身行李
+</strong>
+
+<br><br>
+
+🎒 手提行李1件<br>
+⚖️ 7kg以內<br>
+📐 56 × 36 × 23cm以內<br>
+👜 另可帶1件個人物品
+
+<br><br>
+
+實際託運行李額度
+仍以每位旅客購買的機票票價方案為準。
+
+</div>
+
+</div>
+
+
+
+<!-- BABY -->
+
+<div class="packing-card">
+
+<div class="packing-title">
+👶 寶寶用品
+</div>
+
+<div class="check-grid">
+
+<label class="check-item">
+<input type="checkbox" class="packing-check" data-id="stroller">
+<span>嬰兒推車</span>
+</label>
+
+<label class="check-item">
+<input type="checkbox" class="packing-check" data-id="strollertag">
+<span>推車行李牌</span>
+</label>
+
+<label class="check-item">
+<input type="checkbox" class="packing-check" data-id="strollerbag">
+<span>推車防塵／托運袋</span>
+</label>
+
+<label class="check-item">
+<input type="checkbox" class="packing-check" data-id="diapers">
+<span>尿布</span>
+</label>
+
+<label class="check-item">
+<input type="checkbox" class="packing-check" data-id="wipes">
+<span>濕紙巾</span>
+</label>
+
+<label class="check-item">
+<input type="checkbox" class="packing-check" data-id="milk">
+<span>奶粉</span>
+</label>
+
+<label class="check-item">
+<input type="checkbox" class="packing-check" data-id="bottle">
+<span>奶瓶／水杯</span>
+</label>
+
+<label class="check-item">
+<input type="checkbox" class="packing-check" data-id="babytableware">
+<span>餐具／圍兜</span>
+</label>
+
+<label class="check-item">
+<input type="checkbox" class="packing-check" data-id="babycoat">
+<span>寶寶保暖外套</span>
+</label>
+
+<label class="check-item">
+<input type="checkbox" class="packing-check" data-id="babyhat">
+<span>帽子／手套</span>
+</label>
+
+<label class="check-item">
+<input type="checkbox" class="packing-check" data-id="medicine">
+<span>寶寶常用藥</span>
+</label>
+
+<label class="check-item">
+<input type="checkbox" class="packing-check" data-id="comfort">
+<span>安撫／睡眠用品</span>
+</label>
+
+<label class="check-item">
+<input type="checkbox" class="packing-check" data-id="babyclothes">
+<span>替換衣物</span>
+</label>
+
+</div>
+
+
+<div class="warning-box">
+
+<strong>
+🍖 食品注意
+</strong>
+
+<br><br>
+
+含肉寶寶粥、肉鬆、肉乾、香腸、
+火腿等食品不要直接攜帶入韓。
+
+<br>
+
+新鮮水果、蔬菜、
+動植物產品也可能涉及檢疫及申報。
+
+</div>
+
+</div>
+
+
+
+<!-- CUSTOMS -->
+
+<div class="packing-card">
+
+<div class="packing-title">
+🛃 韓國入境
+</div>
+
+
+<div class="warning-box">
+
+<strong>
+需要特別確認
+</strong>
+
+<br><br>
+
+🍖 肉類及含肉食品<br>
+🍎 新鮮水果、蔬菜<br>
+🌱 植物、種子<br>
+💊 特殊／管制藥物<br>
+🔪 武器及管制品<br>
+🐘 保育類動植物製品<br>
+💵 超過規定的大額支付工具<br>
+🛍 超過免稅額商品
+
+</div>
+
+
+<div class="safe-box">
+
+<strong>
+目前韓國旅客免稅額參考
+</strong>
+
+<br><br>
+
+一般物品：US$800<br>
+酒類：2L以下且總價US$400以下<br>
+香水：100ml
+
+</div>
+
+
+<div class="small-note">
+
+規定可能於2027年出發前更新，
+出發前一個月再次確認最新官方規定。
+
+</div>
+
+</div>
+
+
+
+<!-- RETURN -->
+
+<div class="packing-card">
+
+<div class="packing-title">
+🇹🇼 回台灣前
+</div>
+
+<div class="check-grid">
+
+<label class="check-item">
+<input type="checkbox" class="packing-check" data-id="weight">
+<span>確認行李重量</span>
+</label>
+
+<label class="check-item">
+<input type="checkbox" class="packing-check" data-id="returnpower">
+<span>行動電源放隨身包</span>
+</label>
+
+<label class="check-item">
+<input type="checkbox" class="packing-check" data-id="liquid">
+<span>大型液體放託運</span>
+</label>
+
+<label class="check-item">
+<input type="checkbox" class="packing-check" data-id="taxrefund">
+<span>退稅資料</span>
+</label>
+
+<label class="check-item">
+<input type="checkbox" class="packing-check" data-id="returnpassport">
+<span>護照確認</span>
+</label>
+
+<label class="check-item">
+<input type="checkbox" class="packing-check" data-id="taiwanfood">
+<span>伴手禮是否可入境台灣</span>
+</label>
+
+</div>
+
+</div>
+
+
+
+<div class="note-box">
+
+<strong>
+❤️ 這趟旅行最重要的原則
+</strong>
+
+<br><br>
+
+不追求景點數量。
+
+<br>
+
+長輩要有拍照及咖啡休息時間，
+寶寶要有穩定的吃飯與睡眠時間。
+
+<br>
+
+遇到低溫、強風、下雨或寶寶狀況不好，
+戶外景點直接刪掉也沒關係。
+
+</div>
+
+
+</div>
+
+</section>
+
+
+
+<footer>
+
+BUSAN 2027
+
+<br>
+
+2027.01.22 — 01.28
+
+</footer>
+
+
+
+<!-- ==================================================
+     JAVASCRIPT
+================================================== -->
+
+<script>
+
+
+/* ==================================================
+   CURRENCY
+================================================== */
+
+let twdToKrwRate = null;
+
+
+const twdInput =
+  document.getElementById("twdInput");
+
+const krwInput =
+  document.getElementById("krwInput");
+
+const rateText =
+  document.getElementById("rateText");
+
+const rateTime =
+  document.getElementById("rateTime");
+
+
+
+async function getExchangeRate() {
+
+  try {
+
+    const response =
+      await fetch(
+        "https://api.frankfurter.dev/v2/rate/TWD/KRW"
+      );
+
+    if (!response.ok) {
+
+      throw new Error(
+        "匯率取得失敗"
+      );
+
+    }
+
+
+    const data =
+      await response.json();
+
+
+    twdToKrwRate =
+      data.rate;
+
+
+    rateText.innerHTML =
+      `1 新台幣 ≈ ${twdToKrwRate.toFixed(2)} 韓元`;
+
+
+    rateTime.innerHTML =
+      `參考匯率日期：${data.date}`;
+
+
+    twdInput.value =
+      1000;
+
+
+    convertTWD();
+
+  }
+
+  catch (error) {
+
+    rateText.innerHTML =
+      "目前無法取得最新匯率";
+
+    rateTime.innerHTML =
+      "請稍後重新整理";
+
+    console.error(error);
+
+  }
+
+}
+
+
+
+function convertTWD() {
+
+  if (!twdToKrwRate) {
+
+    return;
+
+  }
+
+
+  const twd =
+    parseFloat(
+      twdInput.value
+    );
+
+
+  if (isNaN(twd)) {
+
+    krwInput.value = "";
+
+    return;
+
+  }
+
+
+  krwInput.value =
+    Math.round(
+      twd *
+      twdToKrwRate
+    );
+
+}
+
+
+
+function convertKRW() {
+
+  if (!twdToKrwRate) {
+
+    return;
+
+  }
+
+
+  const krw =
+    parseFloat(
+      krwInput.value
+    );
+
+
+  if (isNaN(krw)) {
+
+    twdInput.value = "";
+
+    return;
+
+  }
+
+
+  twdInput.value =
+    Math.round(
+      krw /
+      twdToKrwRate
+    );
+
+}
+
+
+
+function setTWD(amount) {
+
+  twdInput.value =
+    amount;
+
+  convertTWD();
+
+}
+
+
+
+function setKRW(amount) {
+
+  krwInput.value =
+    amount;
+
+  convertKRW();
+
+}
+
+
+
+twdInput.addEventListener(
+  "input",
+  convertTWD
+);
+
+
+krwInput.addEventListener(
+  "input",
+  convertKRW
+);
+
+
+getExchangeRate();
+
+
+
+/* ==================================================
+   CHECKLIST MEMORY
+================================================== */
+
+const checklist =
+  document.querySelectorAll(
+    ".packing-check"
+  );
+
+
+
+function loadChecklist() {
+
+  checklist.forEach(
+    (item) => {
+
+      const saved =
+        localStorage.getItem(
+          "busan2027_" +
+          item.dataset.id
+        );
+
+
+      item.checked =
+        saved === "true";
+
+    }
+  );
+
+
+  updateProgress();
+
+}
+
+
+
+function saveChecklist(item) {
+
+  localStorage.setItem(
+
+    "busan2027_" +
+    item.dataset.id,
+
+    item.checked
+
+  );
+
+}
+
+
+
+function updateProgress() {
+
+  const total =
+    checklist.length;
+
+
+  const checked =
+    document.querySelectorAll(
+      ".packing-check:checked"
+    ).length;
+
+
+  const percent =
+    total === 0
+
+      ? 0
+
+      : Math.round(
+          checked /
+          total *
+          100
+        );
+
+
+  document.getElementById(
+    "progressText"
+  ).innerText =
+
+    `準備進度：${checked} / ${total}（${percent}%）`;
+
+
+  document.getElementById(
+    "progressFill"
+  ).style.width =
+
+    percent + "%";
+
+}
+
+
+
+checklist.forEach(
+  (item) => {
+
+    item.addEventListener(
+      "change",
+      () => {
+
+        saveChecklist(item);
+
+        updateProgress();
+
+      }
+    );
+
+  }
+);
+
+
+
+function resetChecklist() {
+
+  const confirmReset =
+    confirm(
+      "確定要清除全部行李準備狀態嗎？"
+    );
+
+
+  if (!confirmReset) {
+
+    return;
+
+  }
+
+
+  checklist.forEach(
+    (item) => {
+
+      item.checked =
+        false;
+
+
+      localStorage.removeItem(
+
+        "busan2027_" +
+        item.dataset.id
+
+      );
+
+    }
+  );
+
+
+  updateProgress();
+
+}
+
+
+
+loadChecklist();
+
+
+</script>
+
+
+</body>
+
+</html>
